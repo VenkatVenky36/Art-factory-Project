@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Art Factory</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         
-    :root {
-        --blue: #007bff;
-        --pink: #e83e8c;
-        --red: #dc3545;
-        --white: #fff;
-        --dark: #343a40;
-    }
+    
     
     *{
+        
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
@@ -80,7 +74,7 @@
     }
     
     .btn1:hover{
-        background: var(--blue);
+        background-color:black ;
     }
     
     /* About Us Heading CSS Start */
@@ -203,7 +197,7 @@
     .home .content p{
         font-size: 1.7rem;
         color: #fff;
-        padding: 1rem 0;
+        padding: 1% 0;
     }
     
     .about .column{
@@ -211,7 +205,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 3rem 0;
+        padding: 3% 0;
     }
     
     .about .column .image{
@@ -237,9 +231,7 @@
         padding: 1rem 0;
     }
     
-    /* .about .column .content .buttons a:last-child{
-        margin-left: 2rem;
-    } */
+     
     
     .about .column ul li{
         list-style: none;
@@ -382,7 +374,7 @@
         background-color: #eeeeee;
         margin: 1rem 0;
         box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
-        cursor: pointer;
+         
     }
     
     .faq .row .accordion-container .accordion .accordion-header span{
@@ -516,7 +508,7 @@
         justify-content: space-around;
         padding: 1rem 2rem;
         margin-top: 1rem;
-        background: #fff;
+         
     }
     
     .footer p{
@@ -652,7 +644,7 @@
         }
     
         .faq .row .accordion-container{
-            width: 100%;
+            width: 150%;
         }
     
         .contact .row{
@@ -695,7 +687,8 @@
          
     }
     .mainparent{
-      padding: 5% 8%;
+      justify-content: center;
+      padding: 5% 3%;
     }
     </style>
   </head>
@@ -703,7 +696,7 @@
     <!-- Header Section Start -->
      <div class="mainparent">
       <header>
-        <a href="#" class="logo" "><span >ART</span>FACTORY</a>
+        <a href="#" class="logo" ><span >ART</span>FACTORY</a>
   
         <input type="checkbox" id="menu-bar" />
         <label for="menu-bar" class="fas fa-bars"></label>
@@ -815,19 +808,80 @@
         </div>
         
       </section>
+      <!-- service section start -->
+      <section class="services" id="services">
+        <h1 class="heading1">Services</h1>
+        <br /><br /><br />
+        <div class="box-container">
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-01.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>First Box Service</h3>
+              <br />
+              <p>
+                Aenean vulputate massa sed neque consectetur, ac fringilla quam
+                aliquet. Sed a enim nec eros tempor cursus at id libero.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">Read More</a><br /><br />
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-02.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>Second Box Title</h3>
+              <br />
+              <p>
+                Pellentesque vitae urna ut nisi viverra tristique quis at dolor.
+                In non sodales dolor, id egestas quam. Aliquam erat volutpat.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">Discover More</a><br /><br />
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-03.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>Third Title Box</h3>
+              <br />
+              <p>
+                Quisque finibus libero augue, in ultrices quam dictum id. Aliquam
+                quis tellus sit amet urna tincidunt bibendum.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">More Detail</a><br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <!-- Service Section End -->
   
       <!-- FAQ Section Start -->
-      <section class="faq" id="faq"  >
+      <section class="faq" id="faq" style="padding:3% 3%;" >
         <br /><br /><br /><br /><br /><br>
         <h1 class="heading">Frequently Asked Questions</h1>
         <p class="para">
           Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien.<br />
           Nunc euismod risus ac lobortis congue. Sed erat quam.
         </p>
-        <div class="row">
-          <div class="content">
+        <div class="row" >
+          <div class="content" style="padding:3% 5%;">
             <h3>Class aptent taciti sociosqu ad litora torquent per conubia.</h3>
             <p>
               Curabitur placerat diam in risus lobortis, laoreet porttitor est
@@ -846,11 +900,11 @@
               <a href="#contact" class="btn1">Contact Us</a>
             </div>
           </div>
-          <div class="accordion-container">
+          <div class="accordion-container" style="padding:3% 3%;">
             <div class="accordion">
               <div class="accordion-header">
                 <span><i class="fa-solid fa-pen-nib"></i></span>
-                <h3>First Common Question</h3>
+                <h3>First Question Answer</h3>
               </div>
               <div class="accordion-body">
                 <p>
@@ -883,7 +937,7 @@
             <div class="accordion">
               <div class="accordion-header">
                 <span><i class="fa-solid fa-pen-nib"></i></span>
-                <h3>Third Answer for you</h3>
+                <h3>Third Question Answer</h3>
               </div>
               <div class="accordion-body">
                 <p>
@@ -900,7 +954,7 @@
             <div class="accordion">
               <div class="accordion-header">
                 <span><i class="fa-solid fa-pen-nib"></i></span>
-                <h3>Fourth Question Asked</h3>
+                <h3>Fourth Question Answer</h3>
               </div>
               <div class="accordion-body">
                 <p>
@@ -917,7 +971,7 @@
             <div class="accordion">
               <div class="accordion-header">
                 <span><i class="fa-solid fa-pen-nib"></i></span>
-                <h3>Fifth Ever Question</h3>
+                <h3>Fifth Question Answer</h3>
               </div>
               <div class="accordion-body">
                 <p>
@@ -933,7 +987,7 @@
             <div class="accordion">
               <div class="accordion-header">
                 <span><i class="fa-solid fa-pen-nib"></i></span>
-                <h3>Sixth Sense Question</h3>
+                <h3>Sixth Question Answer</h3>
               </div>
               <div class="accordion-body">
                 <p>
@@ -949,23 +1003,18 @@
       <!-- FAQ Section End -->
   
       <!-- Contact Section Start -->
-      <div class="contact" id="contact">
+      <div class="contact" id="contact" style="padding:3% 3%; height:50%">
         <br />
-        <h1 class="heading" style="padding-top: 40px;">Contact Us</h1>
+        <h1 class="heading" >Contact Us</h1>
         <br />
         <div class="row">
           <div class="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
-             height="500%"
-              width="100%"
-              
-              frameborder="0"
-              style="border: 0"
-              allowfullscreen
-            ></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
+            width="295%" height="550" style="border:0; padding:3% 3%;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"   ></iframe>
           </div>
-          <div class="form-container">
+          <div class="form-container" style="padding: 3% 3%; height:444px; width:444px; margin-right:0px;">
             <form action="">
               <div class="inputBox">
                 <input type="text" placeholder="Full Name" required />
