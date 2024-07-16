@@ -1,693 +1,1138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Factory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <style>
-        .container {
-            display: grid;
-            grid-template-row: repeat(8, 100px);
-
-        } 
-        .main1 {
-            z-index: 2px;
-            padding: 35%;
-            border-radius: 15%;
-            width: 100%;
-            height: 650%;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        
+    :root {
+        --blue: #007bff;
+        --pink: #e83e8c;
+        --red: #dc3545;
+        --white: #fff;
+        --dark: #343a40;
+    }
+    
+    *{
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+    }
+    
+    ::selection {
+        background: #ff589e;
+        color: #fff;
+    }
+    
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+    
+    body{
+        background: #f9f9f9;
+    }
+    
+    section{
+        min-height: 100vh;
+        padding: 0 9%;
+        padding-top: 7.5rem;
+    }
+    
+    .btn{
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        border-radius: 5rem;
+        background: #f55858;
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: all .3s linear;
+    }
+    
+    .btn:hover{
+        transform: scale(1.1);
+    }
+    
+    .btn1{
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        border-radius: 5rem;
+        background: #00b4c6;
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: all .3s linear;
+    }
+    
+    .btn1:hover{
+        background: var(--blue);
+    }
+    
+    /* About Us Heading CSS Start */
+    
+    .heading{
+        text-align: center;
+        color: var(--blue);
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+    
+    .para{
+        text-align: center;
+        color: #4a4a4a;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .heading1{
+        text-align: center;
+        color: #fff;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+    
+    /* About Us Heading CSS End */
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+    
+    header .logo{
+        font-size: 3rem;
+        letter-spacing: .1rem;
+        color: var(--dark);
+        font-weight: 700;
+      
+    }
+    
+    header .logo span{
+        color: var(--dark);
+        
+    }
+    
+    header .navbar a{
+        font-size: 1.7rem;
+        margin-left: 2rem;
+        color: var(--dark);
+    }
+    
+    header .navbar a:hover{
+        color: var(--red);
+    }
+    
+    header input{
+        display: none;
+    }
+    
+    header label{
+        font-size: 3rem;
+        color: var(--bluedark);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(./banner-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .home .image img{
+        width: 40vw;
+        animation: float 3s linear infinite;
+    }
+    
+    @keyframes float{
+        0%, 100%{
+            transform: translateY(0rem);
         }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-
+        50%{
+            transform: translateY(-3.5rem);
         }
-
-        p {
-            font-family: Lucida Bright;
-            font-size: 105%;
-            color: white;
-
-        }
-
-        #text1 {
-
-            font-weight: 900;
-            color: white;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-transform: uppercase;
-            font-size: 150%;
-        }
-
-        li {
-            list-style: none;
-            padding: 10px 28px 0px 28px;
-            border-radius: 25px;
-            padding-left: -30%;
-            color: black;
-
-        }
-
-        .box1 {
-            padding-top: -1%;
-            padding-right: 25%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1.5%;
-             
-        }
-
-        .nav .box2 {
-            display: flex;
-
-            gap: 5px
-        }
-
-        .parentnavbar {
-            z-index: 1px;
-            margin-top: -53%;
-
-        }
-
-        .pic1 {
-            display: flex;
-            margin-top: -45%;
-            margin-left: -45%;
-
-        }
-
-        .container1 {}
-
-        .part1 {
-            display: flex;
-            flex-direction: column;
-            margin-top: 8%;
-        }
-
-        .part11 {
-            display: grid;
-            margin-top: 1%;
-            margin-left: 30%;
-        }
-
-        .part1main {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        #textstyle {
-            font-family: Stencil;
-            text-shadow: 2px 2px 10px black;
-            font-size: 140%;
-        }
-
-        #textstyle2 {
-            font-size: 140%;
-            font-family: Bradley Hand ITC;
-            text-shadow: 3px 3px 10px red;
-        }
-
-        .anmi1 {
-            animation: move;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-
-        @keyframes move {
-            0% {
-                transform: translate(0, 100px);
-            }
-
-            100% {
-                transform: translate(0, 0);
-            }
-        }
+    }
+    
+    .home .content h3{
+        font-size: 5.5rem;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    
+    .home .content h3 span{
+        /* color: var(--pink); */
+        text-transform: uppercase;
+    }
+    
+    .home .content p{
+        font-size: 1.7rem;
+        color: #fff;
+        padding: 1rem 0;
+    }
+    
+    .about .column{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 3rem 0;
+    }
+    
+    .about .column .image{
+        flex: 1 1 40rem;
+    }
+    
+    .about .column .image img{
+        width: 100%;
+    }
+    
+    .about .column .content{
+        flex: 1 1 40rem;
+    }
+    
+    .about .column .content h3{
+        font-size: 3rem;
+        color: #1e1e1e;
+    }
+    
+    .about .column .content p{
+        font-size: 1.5rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+    /* .about .column .content .buttons a:last-child{
+        margin-left: 2rem;
+    } */
+    
+    .about .column ul li{
+        list-style: none;
+    }
+    
+    .about .column ul li img{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
          
+    }
+    
+    .about .column ul li .text{
+        
+        margin-left: 1rem;
+    }
+    
+    .about .column ul li .text h3{
+        font-size: 1.8rem;
+        color: #1e1e1e;
+    }
+    
+    .about .column ul li .text h3{
+        font-size: 1.8rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+    .services{
+        background: linear-gradient(135deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        /* background: linear-gradient(-45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%); */
+    }
+    
+    .services .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .services .box-container .box{
+        background: #fff;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        border: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        flex: 1 1 30rem;
+        border-radius: .5rem;
+    }
+    
+    .services .box-container .box .user{
+        padding: 4rem;
+    }
+    
+    .services .box-container .box .user img{
+        background: #00b4c6;
+        padding: 1rem;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 9rem;
+        width: 9rem;
+        margin-top: 2rem;
+    }
+    
+    .services .box-container .box .user h3{
+        color: #1e1e1e;
+        font-size: 2rem;
+    }
+    
+    .services .box-container .box .user p{
+        color: #777;
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    
+    .faq{
+        min-height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    
+    .faq .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .faq .row .content{
+        /* height: 70vh;
+        width: 50vw; */
+        width: 100%;
+        flex: 1 1 40rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align:justify;
+    }
+    
+    .faq .row .content h3{
+        font-size: 3rem;
+        color: #1e1e1e;
+    }
+    
+    .faq .row .content p{
+        font-size: 1.5rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+    .faq .row .content span{
+        font-size: 1.5rem;
+        color: var(--dark);
+    }
+    
+    .faq .row .content span a{
+        font-weight: 500;
+    }
+    
+    .faq .row .content span a:hover{
+        color: var(--blue);
+    }
+    
+    .faq .row .accordion-container{
+        width: 50%;
+        text-align: left;
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header{
+        background-color: #eeeeee;
+        margin: 1rem 0;
+        box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+        cursor: pointer;
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header span{
+        display: inline-block;
+        text-align: center;
+        height: 4rem;
+        width: 5rem;
+        line-height: 4rem;
+        font-size: 2rem;
+        background: #fff;
+        color: #333;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header h3{
+        display: inline;
+        color: #1e1e1e;
+        font-weight: 400;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-body{
+        padding: 1rem;
+        color: #444;
+        box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+        font-size: 1.3rem;
+        display: none;
+    }
+    
+    .faq .row .accordion-container .accordion:nth-child(1) .accordion-body{
+        display: block;
+    }
+    
+    .contact{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact .row iframe{
+        height: 70vh;
+        width: 50vw;
+    }
+    
+    .contact .row .form-container{
+        /* height: 70.5vh; */
+        width: 50%;
+        text-align: left;
+        padding: 8.5rem 5rem;
+        background: linear-gradient(135deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+    }
+    
+    .contact .row .form-container input, textarea{
+        outline: none;
+        border: none;
+        height: 4rem;
+        background: none;
+        border-radius: .5rem;
+        box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, .2);
+        padding: 0 1rem;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .contact .row .form-container .inputBox{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ::placeholder{
+        color: #fff;
+    }
+    
+    .contact .row .form-container .inputBox input[type="text"]{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        width: 49%;
+    }
+    
+    .contact .row .form-container .inputBox input[type="email"]{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%); 
+        width: 49%;
+    }
+    
+    .contact .row .form-container textarea{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        width: 100%;
+        height: 20rem;
+        padding: 1rem;
+        resize: none;
+        color: #fff;
+    }
+    
+    .contact .row .form-container input[type="submit"]{
+        background-color: #f55858;
+        color: #fff;
+        cursor: pointer;
+        height: 4rem;
+        width: 10rem;
+        border-radius: 5rem;
+    }
+    
+    .contact .row .form-container input[type="submit"]:hover{
+        background: var(--blue);
+        transition: all .3s linear; 
+    }
+    
+    .footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        background: #fff;
+    }
+    
+    .footer p{
+        color: #4a4a4a;
+        letter-spacing: .1rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    
+    .footer .icons a{
+        color: #00b4c6;
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+    .anmi1 {
+        animation: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
 
-        .item2 {
-            display: flex;
+    @keyframes move {
+        0% {
+            transform: translate(0, 30px);
         }
 
-        .item3 {
-            display: flex;
+        100% {
+            transform: translate(0, 0);
         }
-
-
-        .span1a,
-        .span1b,
-        .span1c {
-            width: 80%;
+    }
+     
+    /* Media Queries */
+    
+    @media screen and (max-width:1200px) {
+        html{
+            font-size: 55%;
         }
-
-        .span1d {
-            text-align: center;
-            background-color: pink;
-            width: 25%;
-
-            border-radius: 10px;
+    
+        .contact .row{
+            /* flex-flow: column; */
+            flex-flow: row;
         }
-
-        .mainitem2 {
-            display: flex;
-            padding: 5%;
-            justify-content: space-evenly;
+    
+        .contact .row .map iframe{
+            /* width: 100vw; */
+            width: 50vw;
+            height: 33.2rem;
         }
-
-        .item2b {
-            margin-left: 10%;
-        }
-
-        .span1a {
-            font-size: 140%;
-        }
-
-        .mainitem3 {
-            display: flex;
-            padding: 5%;
-            margin-top: -15%;
-            justify-content: space-evenly;
-        }
-
-        .span3a,
-        .span3b,
-        .span3c {
-            width: 80%;
-        }
-
-        .span3d {
-            text-align: center;
-            background-color: pink;
-            width: 20%;
-            border-radius: 10px;
-        }
-
-        .mainitem2 {
-            display: flex;
-            padding: 5%;
-            justify-content: space-evenly;
-        }
-
-        .item2b {
-            margin-left: 10%;
-        }
-
-        .span1a {
-            font-size: 140%;
-        }
-
-        .item11 {
-            display: flex;
-            padding-left: 15%;
-        }
-
-        .item11,
-        .itemsub1 {
-            margin-left: 9px;
-        }
-
-        #text11 {
-            font-family: Calibri;
-        }
-
-        .part5 {
-
-           
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
-            background-color: rgb(131, 131, 251);
-            height: 100vw;
-
-        }
-
-        .imgpic111 {
-            width: 30%;
-        }
-
-        .box1111,
-        .box2222,
-        .box3333,
-        .box4444,
-        .box5555,
-        .box6666 {
-            background-color: orange;
-            margin: 1%;
-            width: 15%;
-            height: 40%;
-            padding: 2% 2%;
-            border-radius: 10%;
-
-        }
-
-        .item1111 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .item1111 .itemsub1111 {
-            text-align: center;
-            margin-left: 8%;
-        }
-
-        .item1a h5,
-        .part5text,
-        span {
-            margin-bottom: 2%;
-        }
-
-        .checked {
-            color: green;
-        }
-
-        .part5text {
-            font-weight: 400%;
-            font-size: 110%;
-        }
-
-
-        .item2222 {
-            text-align: justify;
-            font-size: 15%;
-            padding: 12% 0 0 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-        }
-
-        #button {
-            background-color: black;
-            margin-left: 24%;
-            width: 50%;
-            border-radius: 0%;
-        }
-
-        .part5text {
-            font-family: Franklin Gothic;
-        }
-
-        .part5text1 {
-            font-family: Franklin Gothic Book;
-        }
-
-        #button1 {
-            margin-left: 30%;
-        }
-
-        #bar {
-            background-color: aliceblue;
-            width: 20%;
-            border-radius: 10%;
-        }
-
-        #part5text11 {
-            display: flex;
-            justify-content: center;
-            margin-top: 5%;
-            font-size: 250%;
-            font-family: Franklin Gothic Book;
-        }
-
-        #part5text22 {
-            display: flex;
-            justify-content: center;
-
-            font-family: Gadugi;
-        }
-
-        .arrow1 {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .arrow2 {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .arrow3 {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .arrow4 {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .arrow5 {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .arrow1:hover {
-            background-color: rgb(212, 221, 218);
-            border-radius: 10px;
-        }
-
-        .arrow2:hover {
-            background-color: rgb(212, 221, 218);
-            border-radius: 10px;
-        }
-
-        .arrow3:hover {
-            background-color: rgb(212, 221, 218);
-            border-radius: 10px;
-        }
-
-        .arrow4:hover {
-            background-color: rgb(212, 221, 218);
-            border-radius: 10px;
-        }
-
-        .arrow5:hover {
-            background-color: rgb(212, 221, 218);
-            border-radius: 10px;
-        }
-
-        .part5text111b {
-            padding: 3%3%;
-            border-radius: 10px;
-        }
-
-        .item5 {
-            display: flex;
-            gap: -80%;
-        }
-
-        #fname,
-        #lname {
+    
+        .contact .row .form-container{
             width: 100%;
-            padding: 2% 2%;
-            margin: 1% 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+            /* padding: 13rem 1.5rem; */
+            padding: 0rem 1.5rem;
+    
         }
-
-        [type=submit] {
-            width: 30%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 2% 2%;
-            margin: 1% 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+    }
+    
+    @media screen and (max-width:991px) {
+        section{
+            min-height: 100vh;
+            padding: 0 3%;
+            padding-top: 7.5rem;
         }
-
-        [type=submit]:hover {
-            background-color: #45a049;
+    }
+    
+    @media screen and (max-width:768px) {
+        header label{
+            visibility: visible;
+            opacity: 1;
         }
-
-        .locate2 {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 6%;
-            margin-left: -90%;
+    
+        header .navbar{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 1rem 2rem;
+            border-top: .1rem solid rgba(0, 0, 0, .2);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            transform-origin: top;
+            transform: scaleY(0);
+            opacity: 0;
+            transition: .2s linear;
         }
-
-        .item6 {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 5%;
-            gap: -50%;
+    
+        header .navbar a{
+            display: block;
+            margin: 2rem 0;
+            font-size: 2rem;
         }
-        .item7{
-            display: flex;
-            justify-content: space-around;
-            padding-top: 5%;
+    
+        header input:checked ~ .navbar{
+            transform: scaleY(1);
+            opacity: 1;
         }
-        .foot1{
-            display: flex;
-            flex-direction: row;
-            
+    
+        header input:checked ~ label::before{
+            content: '\f00d';
         }
-        .foot2{
-            display: flex;
-            justify-content: center;
-            align-items: center;    
-            gap: 15px;
+    
+        .home{
+            flex-flow: column-reverse;
         }
+    
+        .home .image img{
+            width: 100%;
+        }
+    
+        .home .content h3{
+            font-size: 3.6rem;
+        }
+    
+        .home .content p{
+            font-size: 1.5rem;
+        }
+    
+        .about{
+            background-position: right;
+        }
+    
+        .faq{
+            padding: 0;
+        }
+    
+        .faq .row{
+            padding: 0 1rem;
+            flex-flow: column;
+        }
+    
+        .faq .row .content{
+            width: 100vw;
+        }
+    
+        .faq .row .accordion-container{
+            width: 100%;
+        }
+    
+        .contact .row{
+            flex-flow: column;
+        }
+    
+        .contact .row .map iframe{
+            width: 100vw;
+        }
+    
+        .contact .row .form-container{
+            width: 100%;
+            /* padding: 13rem 1.5rem; */
+            padding: 0rem 1.5rem;
+    
+        }
+    
+        .footer{
+            flex-flow: column;
+        }
+        .footer h1{
+            text-align: center;
+        }
+    
+        .footer .icons{
+            padding: 1rem 0;
+        }
+    }
+    
+    @media screen and (max-width:450px) {
+        html{
+            font-size: 50%;
+        }
+    
+        .about .column .content .buttons a{
+            width: 100%;
+            text-align: center;
+        }
+    
          
-         #lastone{
-            padding-left: 15%;;
-         }
+    }
     </style>
-</head>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header>
+      <a href="#" class="logo" "><span >ART</span>FACTORY</a>
 
-<body>
-    <div class="container">
-        <div class="item1">
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar" class="fas fa-bars"></label>
+      <nav class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#faq">FREQUENTLY QUESTIONS</a>
+        <a href="#contact">CONTACT US</a>
+      </nav>
+    </header>
+    <!-- Header Section End -->
 
-            <img src="./banner-bg.png" alt="" id="pic1">
-            <div class="mainnavbar"></div>
-            <div class="parentnavbar">
-                <div class="nav">
-                    <div class="box1">
-                        <span style="font-family: Ga Maamli;">ART <span style="font-family: Forte; font-size:200%;">FACTORY</span></span>
-                    </div>
-                    <div class="box2">
-                        <li id="h11"><span style="color: red;">HOME</span></li>
-                        <li id="h11">ABOUT </li>
-                        <li id="h11">SERVICES</li>
-                        <li id="h11">FREQUENTLY QUESTIONS</li>
-                        <li id="h11">DROP DOWN</li>
-                        <li id="h11">CONTACT US</li>
-                    </div>
-                </div>
-            </div>
-            <div class="part1main">
-                <div class="part1">
-                    <span id="text1">
-                        <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  "><span
-                                id="textstyle" >Art Factory is</span> <br><span id="textstyle2">free for You</span></h1>
-                    </span>
-                    <span>
-                        <p>This template is avilable for 100% free of charge on TemplateMo. <br>Download,modify and use
-                            this for your business</p>
-                    </span>
-                            <span id="lastone"><input type="button" value="FIND OUT MORE"  style="border-radius: 18px;   height: 30px;font-size:medium;color: white; width:30%;  background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            </span>       
-                </div>
-                <div class="part11">
-                    <span><img src="./slider-icon.png" alt="" class="anmi1"></span>
-                </div>
-            </div>
-        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="mainitem2">
-            <div class="item2">
-                <div class="item2a">
-                    <img src="./left-image.png" alt="" style="margin-top: 120px;" class="anmi1">
-                </div>
-                <div class="item2b" style="margin-top: 220px;">
-                    <div class="span1a" style="font-family: Palatino Linotype;"><b>Vivamus sodales nisi id ante molestie
-                            venenatis</b></div> <br><br>
-                    <div class="span1b">Fusce sollicitudin feugiat risus, tempus faucibus arcu blandit nec. Duis auctor
-                        dolor eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet tristique condimentum.</div>
-                    <br> <br>
-                    <div class="span1c">Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit amet,
-                        ultrices malesuada odio. Donec non quam euismod, mattis dui a, ultrices nisi.</div> <br><br>
-                    <div class="span1d" style="margin-left: 110px;">DISCOVER MORE</div>
-                </div>
-            </div>
-        </div><br><br><br><br><br><br>
-        <div class="mainitem3">
-            <div class="item3">
-                <div class="item3b" style="margin-top: 220px;">
-                    <div class="span3a" style="font-family: Berlin Sans FB;"><b>Curabitur aliquam eget tellus id
-                            porta</b></div> <br>
-                    <div class="span3b">Proin justo sapien, posuere suscipit tortor in, fermentum mattis elit. Aenean in
-                        feugiat purus.</div><br> <br>
-                    <div class="mainbox1">
-                        <div class="box1">
-                            <div class="item11">
-                                <img src="./about-icon-01.png" alt="" width="45%">
-                                <div class="itemsub1">
-                                    <h5 style="font-size: 110%;" id="text11">Nulla ultricies risus quis risus</h5>
-                                    <h5> You can use this website template for commercial or non-commercial purposes.
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="item11">
-                                <img src="./about-icon-02.png" alt="" width="45%">
-                                <div class="itemsub1">
-                                    <h5 style="font-size: 110%;" id="text11">Donec consequat commodo purus</h5>
-                                    <h5>You have no right to re-distribute this template as a downloadable ZIP file.
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="item11">
-                                <img src="./about-icon-03.png" alt="" width="45%">
-                                <div class="itemsub1">
-                                    <h5 style="font-size: 110%;" id="text11">Sed placerat sollicitudin mauris</h5>
-                                    <h5>If you have any question or comment, please contact us on TemplateMo.</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item3a">
-                <img src="./right-image.png" alt="" style="margin-top: 120px;" class="anmi1">
-            </div>
+    <!-- Home Section Start -->
+     
 
+
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Art Factory is free <span>for You</span></h3>
+        <p>
+          This template is available for 100% free of charge on TemplateMo.
+          Download, modify and use this for your business website.
+        </p>
+        <a href="#about" class="btn">Find Out More</a>
+      </div>
+      <div class="image">
+        <img src="./slider-icon.png" alt="slider" />
+      </div>
+    </section>
+    <!-- Home Section End -->
+
+    <!-- About Section Start -->
+
+    
+    <section class="about" id="about">
+      <h1 class="heading">About Us</h1>
+      <div class="column">
+        <div class="image">
+          <img src="./left-image.png" alt="" class="anmi1">
         </div>
-
-
-        <div class="item4">
-            <div class="content1">
-                <div class="part5">
-                     
-                    <div class="box1111" style="box-shadow: -2px 3px 10px darkblue;">
-                        <div class="item1111">
-                            <img src="./service-icon-01.png" alt="_strip" class="imgpic111">
-                            <div class="itemsub1111">
-                                <h5 class="part5text">First Box Service</h5>
-                                <p style="padding-bottom: 3%;">Amean vulputate massa sed neque consectetur, ac fringilla
-                                    quam aliquet. Sed a enim nec eros tempor cursus at id libero</p>
-                                <input type="button" value="READ MORE"
-                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box2222" style="box-shadow: -2px 3px 10px darkblue;">
-                        <div class="item1111">
-                            <img src="./service-icon-02.png" alt="_strip" class="imgpic111">
-                            <div class="itemsub11111">
-                                <h5 class="part5text" style="margin-left: 25%;">Second Box Title</h5>
-                                <p style="padding-bottom: 3%;" align="center">Pellentesque vitae urna ut nisi viverra
-                                    tristique quis at dolor. in non sodales dolor, id egestas quam. Aliquam erat
-                                    volutpat.</p>
-                                <input type="button" value="READ MORE" id="button1"
-                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-
-                            </div>
-                        </div>
-                        <div class="item3">
-                        </div>
-                    </div>
-                    <div class="box3333" style="box-shadow: -2px 3px 10px darkblue;">
-                        <div class="item1111">
-                            <img src="./service-icon-03.png" alt="_strip" class="imgpic111">
-                            <div class="itemsub1111">
-                                <h5 class="part5text">Third Title Box</h5>
-                                <p style="padding-bottom: 3%;" id="part5text1">Quisque finibus libero augue, in ultrices
-                                    quam dictum id. Aliquam quis tellus sit amet urna tincidunt bibendum.</p>
-                                <input type="button" value="READ MORE"
-                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                                    
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    <i id=angleright" fa-solid fa-circle-arrow-right"></i>
-                </div>
-
-            </div>
-
-            <span id="part5text11">Frequently Asked Questions</span><br>
-            <span id="part5text22">Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien. Nunc euismod risus
-                ac lobortis congue. Sed erat quam.</span>
-            <div class="item5">
-                <div class="part5text111a" style="margin-left: 10%;">
-                    <h1 style="width: 65%; font-family:Arial Rounded MT; padding-left:4%;">Class aptent taciti sociosqu
-                        ad litora torquent per conubia</h1>
-                    <p style="width: 65%; font-family:Arial Unicode MS; padding-left:4%; color:black;">Curabitur
-                        placerat cian in risus lobortis, laoreet porttitor est elementum. Nulla ultricies risus quis
-                        risus scelerisque, a aliquam tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean
-                        bibendum erat vitae ocio sodales, in facilisis tellus volutpat.</p>
-                    <p style="width: 65%; font-family:Arial Unicode MS; padding-left:4%; color:black;">Sed lobortis
-                        pellentesque magna ac congue, Suspendisse quis molestie magna, id eleifend ex. Ut mollis
-                        ultricies diam nec dictum. Morbi commodo hendrerit mi vel vulputate. Proin non tincidunt dui.
-                        Lorem ipsum dolor sit amet.</p><br>
-                    <p style="width: 39%; font-family:Arial Unicode MS; padding-left:4%; color:black;">E-Mail: <span
-                            style="color: blue;">venkatn0012@gmail.com</span></p><br>
-                    <input type="button" value="CONTACT US" id="button1"
-                        style="border-radius: 20px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left:4%">
-
-                </div>
-                <div class="part5text111b"
-                    style="background-color:rgb(230, 241, 241) ; width:40%; height:50%; margin-right:15%; margin-top:2%; align-items:center;">
-                    <div class="arrow1">
-                        <span style="font-family: Arial Unicode MS;    "><b>First Common Questions</b></span>
-                        <i class="fa-solid fa-angle-down"  ></i>
-                    </div><br>
-                    <span>Dule vulputate porttitor urna sit amet pretium. Phasellusa and pulvinar cros, condimentum
-                        consequat ex. Suspendisse potenti.</span>
-                    <br><br>
-                    <span>Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrun
-                        sodales. Aliquam erat volutpat.</span><br><br>
-                    <div class="arrow2">
-                        <span style="font-family: Arial Unicode MS;"> <b>Second Question Answer</b></span>
-                        <span><i class="fa-solid fa-angle-right"></i></span>
-                    </div><br>
-                    <div class="arrow3">
-                        <span style="font-family: Arial Unicode MS;"> <b>Third Question Answer</b></span>
-                        <span><i class="fa-solid fa-angle-right"></i></span>
-                    </div><br>
-
-
-                    <div class="arrow4">
-                        <span style="font-family: Arial Unicode MS;"> <b>Fourth Question Answer</b></span>
-                        <span><i class="fa-solid fa-angle-right"></i></span>
-                    </div><br>
-
-                    <div class="arrow5">
-                        <span style="font-family: Arial Unicode MS;"> <b>Fifth Question Answer</b></span>
-                        <span><i class="fa-solid fa-angle-right"></i></span>
-                    </div>
-
-                </div>
-            </div>
+        <div class="content">
+          <h3>Vivamus sodales nisi id ante molestie venenatis</h3>
+          <p>
+            This template is <a href="#">last updated on 20 August 2019 </a>for
+            main menu drop-down arrow and sub menu text color. Duis auctor dolor
+            eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet
+            tristique condimentum.
+          </p>
+          <p>
+            Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit
+            amet, ultrices malesuada odio. Donec non quam euismod, mattis dui a,
+            ultrices nisi.
+          </p>
+          <div class="buttons">
+            <a href="#services" class="btn1">Discover More</a>
+          </div>
         </div>
+      </div>
 
-        <div class="item6">
-            <div class="locate1" style="margin-left: -1%;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
-                    width="295%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="locate2">
-                <form action="">
-                    <input type="text" id="fname" name="firstname" placeholder="FULL NAME . . . .">
-                    <input type="text" id="lname" name="lastname" placeholder="E-MAIL . . . .">
-                    <input type="text" id="lname" name="lastname" placeholder="YOUR MESSAGE. . . .">
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            </form>
+      <div class="column">
+        <div class="content">
+            <h3>Curabitur aliquam eget tellus id porta</h3>
+            <p>
+                Proin justo sapien, posuere suscipit tortor in, fermentum mattis
+                elit. Aenean in feugiat purus.
+            </p>
+            <br /><br />
+            <ul>
+                <li>
+                    
+                    <img src="./about-icon-01.png" alt="">
+                    <div class="text">
+                <h3>Nulla ultricies risus quis risus</h3>
+                <p>
+                  You can use this website template for commercial or
+                  non-commercial purposes.
+                </p>
+              </div>
+              <br />
+            </li>
+            <li>
+              <img src="./about-icon-02.png" alt="" >
+              <div class="text">
+                <h3>Donec consequat commodo purus</h3>
+                <p>
+                  You have no right to re-distribute this template as a
+                  downloadable ZIP file on any website.
+                </p>
+              </div>
+              <br />
+            </li>
+            <li>
+              <img src="./about-icon-03.png" alt="" />
+              <div class="text">
+                <h3>Sed placerat sollicitudin mauris</h3>
+                <p>
+                  If you have any question or comment, please
+                  <a rel="" href="">contact</a>
+                  us on TemplateMo.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
+        <div class="image">
+          <img src="./right-image.png" alt="" class="anmi1">
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h1 class="heading">CONTACT FACTORY</h1>
+      <div class="column">
+        <div class="image">
+          <img src="./images-removebg-preview (1).png" alt="" class="anmi1">
+        </div>
+        <div class="content">
+          <h3>Vivamus sodales nisi id ante molestie venenatis</h3>
+          <p>
+            This template is <a href="#">last updated on 20 August 2019 </a>for
+            main menu drop-down arrow and sub menu text color. Duis auctor dolor
+            eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet
+            tristique condimentum.
+          </p>
+          <p>
+            Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit
+            amet, ultrices malesuada odio. Donec non quam euismod, mattis dui a,
+            ultrices nisi.
+          </p>
+          <div class="buttons">
+            <a href="#services" class="btn1">Discover More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+            <h3>Curabitur aliquam eget tellus id porta</h3>
+            <p>
+                Proin justo sapien, posuere suscipit tortor in, fermentum mattis
+                elit. Aenean in feugiat purus.
+            </p>
+            <br /><br />
+            <ul>
+                <li>
+                    
+                    <img src="./about-icon-01.png" alt="">
+                    <div class="text">
+                <h3>Nulla ultricies risus quis risus</h3>
+                <p>
+                  You can use this website template for commercial or
+                  non-commercial purposes.
+                </p>
+              </div>
+              <br />
+            </li>
+            <li>
+              <img src="./about-icon-02.png" alt="" >
+              <div class="text">
+                <h3>Donec consequat commodo purus</h3>
+                <p>
+                  You have no right to re-distribute this template as a
+                  downloadable ZIP file on any website.
+                </p>
+              </div>
+              <br />
+            </li>
+            <li>
+              <img src="./about-icon-03.png" alt="" />
+              <div class="text">
+                <h3>Sed placerat sollicitudin mauris</h3>
+                <p>
+                  If you have any question or comment, please
+                  <a rel="" href="">contact</a>
+                  us on TemplateMo.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="./images-removebg-preview.png" alt="" class="anmi1">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section End -->
+
+    <!-- Service Section Start -->
+    <section class="services" id="services">
+      <h1 class="heading1">Services</h1>
+      <br /><br /><br />
+      <div class="box-container">
+        <div class="box">
+          <div class="user">
+            <img
+              src="./service-icon-01.png"
+              alt=""
+            /><br /><br /><br />
+            <h3>First Box Service</h3>
+            <br />
+            <p>
+              Aenean vulputate massa sed neque consectetur, ac fringilla quam
+              aliquet. Sed a enim nec eros tempor cursus at id libero.
+            </p>
+            <br />
+            <div class="buttons">
+              <a href="#" class="btn1">Read More</a><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="user">
+            <img
+              src="./service-icon-02.png"
+              alt=""
+            /><br /><br /><br />
+            <h3>Second Box Title</h3>
+            <br />
+            <p>
+              Pellentesque vitae urna ut nisi viverra tristique quis at dolor.
+              In non sodales dolor, id egestas quam. Aliquam erat volutpat.
+            </p>
+            <br />
+            <div class="buttons">
+              <a href="#" class="btn1">Discover More</a><br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="box" style="height: 210%;">
+          <div class="user">
+            <img
+              src="./service-icon-03.png"
+              alt=""  
+            /><br /><br /><br />
+            <h3>Third Title Box</h3>
+            <br />
+            <p>
+              Quisque finibus libero augue, in ultrices quam dictum id. Aliquam
+              quis tellus sit amet urna tincidunt bibendum.
+            </p>
+            <br />
+            <div class="buttons">
+              <a href="#" class="btn1">More Detail</a><br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Section End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq" id="faq" style="padding-top: 20px;">
+      <br /><br /><br /><br /><br /><br>
+      <h1 class="heading">Frequently Asked Questions</h1>
+      <p class="para">
+        Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien.<br />
+        Nunc euismod risus ac lobortis congue. Sed erat quam.
+      </p>
+      <div class="row">
+        <div class="content">
+          <h3>Class aptent taciti sociosqu ad litora torquent per conubia.</h3>
+          <p>
+            Curabitur placerat diam in risus lobortis, laoreet porttitor est
+            elementum. Nulla ultricies risus quis risus scelerisque, a aliquam
+            tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean
+            bibendum erat vitae odio sodales, in facilisis tellus volutpat.
+          </p>
+          <p>
+            Sed lobortis pellentesque magna ac congue. Suspendisse quis molestie
+            magna, id eleifend ex. Ut mollis ultricies diam nec dictum. Morbi
+            commodo hendrerit mi vel vulputate. Proin non tincidunt dui. Lorem
+            ipsum dolor sit amet.
+          </p>
+          <span>Email: <a href="#">email@company.com</a><br /></span>
+          <div class="buttons"> <br><br>
+            <a href="#contact" class="btn1">Contact Us</a>
+          </div>
+        </div>
+        <div class="accordion-container">
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>First Common Question</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Duis vulputate porttitor urna sit amet pretium. Phasellus sed
+                pulvinar eros, condimentum consequat ex. Suspendisse potenti.
+                <br /><br />
+                Pellentesque maximus lorem sed elit imperdiet mattis. Duis
+                posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>Second Question Answer</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Sed odio elit, cursus sed consequat at, rutrum eget augue. Cras
+                ac eros iaculis, tempor quam sit amet, scelerisque mi. Quisque
+                eu risus eget nunc porttitor vestibulum at a ante. <br /><br />
+                Praesent ut placerat turpis, vel pellentesque dolor. Sed rutrum
+                eleifend tortor, eu luctus orci sagittis in. In blandit
+                fringilla mollis.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>Third Answer for you</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Proin feugiat ante ut vulputate rutrum. Nam quis erat turpis.
+                Nullam maximus pharetra lorem, eu condimentum est iaculis ut.
+                Pellentesque mattis ultrices dignissim. <br /><br />
+                Etiam et enim finibus, feugiat massa efficitur, finibus sapien.
+                Sed cursus lacus quis arcu scelerisque, eget ornare risus
+                maximus. Aenean non lectus id odio rhoncus pharetra.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>Fourth Question Asked</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Phasellus eu purus ornare, eleifend orci nec, egestas nulla. Sed
+                sed aliquet sapien. Proin placerat, ipsum eu posuere blandit,
+                tellus quam consectetur nisi, id sollicitudin diam ex at nisi.
+                <br /><br />
+                Aenean fermentum eget turpis egestas semper. Sed finibus mollis
+                venenatis. Praesent at sem in massa iaculis pharetra.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>Fifth Ever Question</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Quisque aliquet ipsum ut magna rhoncus, euismod lacinia elit
+                rhoncus. Sed sapien elit, mollis ut ultricies quis, fermentum
+                nec ante. <br /><br />
+                Sed nec ex nec tortor fermentum sollicitudin id ut ligula. Ut
+                sagittis rutrum lectus, non sagittis ante euismod eu.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-header">
+              <span><i class="fa-solid fa-pen-nib"></i></span>
+              <h3>Sixth Sense Question</h3>
+            </div>
+            <div class="accordion-body">
+              <p>
+                Suspendisse potenti. Ut dapibus leo ut massa vulputate semper.
+                Pellentesque maximus lorem sed elit imperdiet mattis. Duis
+                posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Contact Section Start -->
+    <div class="contact" id="contact">
+      <br />
+      <h1 class="heading" style="padding-top: 40px;">Contact Us</h1>
+      <br />
+      <div class="row">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
+           height="500%"
+            width="100%"
+            
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="form-container">
+          <form action="">
+            <div class="inputBox">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email" required />
+            </div>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <input type="submit" value="SEND IT" />
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="item7">
-        <div class="foot1" style="font-size: 100%;">
-            Copyright @ 2024 Art Factory Company . Desgin : <span style="color: blue;">@ Venkat Venky</span>
-        </div>
-        <div class="foot2" style="font-size: 150%; color:blue; ">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-chromecast"></i>
-            <i class="fa-brands fa-chrome"></i>
-        </div>
-    </div>
-</body>
+    <!-- Contact Section End -->
 
+    <!-- Footer Section Start -->
+    <div class="footer">
+      <!-- <h1>Created by Mr.Ray | All Rights Reserved.</h1> -->
+      <p>Copyright &copy; 2024 Art Factory Company Desgin <span style="color: blue;">@Venkat Venky</span></p>
+
+      <div class="icons">
+        <a href="#" class="fa-brands fa-square-facebook"></a>
+        <a href="https://www.instagram.com/" class="fa-brands fa-square-instagram"></a>
+        <a href="https://www.linkedin.com/in/nallamati-venkat-3673452b5/" class="fa-brands fa-linkedin"></a>
+        <a href="https://github.com/Nallamativenkat" c<i class="fa-brands fa-github"></i></a>
+        <a href="#" class="fa-brands fa-square-dribbble"></a>
+      </div>
+    </div>
+    <!-- Footer Section End -->
+  </body>
 </html>
+<i class="fa-brands fa-square-instagram"></i>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        
+        .container {
+            display: grid;
+            grid-template-row: repeat(8, 100px);
+
+        }
+         
+        .main1 {
+            z-index: 2px;
+            padding: 35%;
+            border-radius: 15%;
+            width: 100%;
+            height: 650%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        p {
+            font-family: Lucida Bright;
+            font-size: 105%;
+            color: white;
+
+        }
+
+        #text1 {
+
+            font-weight: 900;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            font-size: 150%;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px 28px 0px 28px;
+            border-radius: 25px;
+            padding-left: -30%;
+            color: black;
+
+        }
+
+        .box1 {
+            padding-top: -1%;
+            padding-right: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5%;
+             
+        }
+
+        .nav .box2 {
+            display: flex;
+
+            gap: 5px
+        }
+
+        .parentnavbar {
+            z-index: 1px;
+            margin-top: -53%;
+
+        }
+
+        .pic1 {
+            display: flex;
+            margin-top: -45%;
+            margin-left: -45%;
+
+        }
+
+        .container1 {}
+
+        .part1 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8%;
+        }
+
+        .part11 {
+            display: grid;
+            margin-top: 1%;
+            margin-left: 30%;
+        }
+
+        .part1main {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #textstyle {
+            font-family: Stencil;
+            text-shadow: 2px 2px 10px black;
+            font-size: 140%;
+        }
+
+        #textstyle2 {
+            font-size: 140%;
+            font-family: Bradley Hand ITC;
+            text-shadow: 3px 3px 10px red;
+        }
+
+        .anmi1 {
+            animation: move;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 100px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+         
+
+        .item2 {
+            display: flex;
+        }
+
+        .item3 {
+            display: flex;
+        }
+
+
+        .span1a,
+        .span1b,
+        .span1c {
+            width: 80%;
+        }
+
+        .span1d {
+            text-align: center;
+            background-color: pink;
+            width: 25%;
+
+            border-radius: 10px;
+        }
+
+        .mainitem2 {
+            display: flex;
+            padding: 5%;
+            justify-content: space-evenly;
+        }
+
+        .item2b {
+            margin-left: 10%;
+        }
+
+        .span1a {
+            font-size: 140%;
+        }
+
+        .mainitem3 {
+            display: flex;
+            padding: 5%;
+            margin-top: -15%;
+            justify-content: space-evenly;
+        }
+
+        .span3a,
+        .span3b,
+        .span3c {
+            width: 80%;
+        }
+
+        .span3d {
+            text-align: center;
+            background-color: pink;
+            width: 20%;
+            border-radius: 10px;
+        }
+
+        .mainitem2 {
+            display: flex;
+            padding: 5%;
+            justify-content: space-evenly;
+        }
+
+        .item2b {
+            margin-left: 10%;
+        }
+
+        .span1a {
+            font-size: 140%;
+        }
+
+        .item11 {
+            display: flex;
+            padding-left: 15%;
+        }
+
+        .item11,
+        .itemsub1 {
+            margin-left: 9px;
+        }
+
+        #text11 {
+            font-family: Calibri;
+        }
+
+        .part5 {
+
+           
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            background-color: rgb(131, 131, 251);
+            height: 100vw;
+
+        }
+
+        .imgpic111 {
+            width: 30%;
+        }
+
+        .box1111,
+        .box2222,
+        .box3333,
+        .box4444,
+        .box5555,
+        .box6666 {
+            background-color: orange;
+            margin: 1%;
+            width: 15%;
+            height: 40%;
+            padding: 2% 2%;
+            border-radius: 10%;
+
+        }
+
+        .item1111 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item1111 .itemsub1111 {
+            text-align: center;
+            margin-left: 8%;
+        }
+
+        .item1a h5,
+        .part5text,
+        span {
+            margin-bottom: 2%;
+        }
+
+        .checked {
+            color: green;
+        }
+
+        .part5text {
+            font-weight: 400%;
+            font-size: 110%;
+        }
+
+
+        .item2222 {
+            text-align: justify;
+            font-size: 15%;
+            padding: 12% 0 0 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        #button {
+            background-color: black;
+            margin-left: 24%;
+            width: 50%;
+            border-radius: 0%;
+        }
+
+        .part5text {
+            font-family: Franklin Gothic;
+        }
+
+        .part5text1 {
+            font-family: Franklin Gothic Book;
+        }
+
+        #button1 {
+            margin-left: 30%;
+        }
+
+        #bar {
+            background-color: aliceblue;
+            width: 20%;
+            border-radius: 10%;
+        }
+
+        #part5text11 {
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            font-size: 250%;
+            font-family: Franklin Gothic Book;
+        }
+
+        #part5text22 {
+            display: flex;
+            justify-content: center;
+
+            font-family: Gadugi;
+        }
+
+        .arrow1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arrow2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrow3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrow4 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrow5 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrow1:hover {
+            background-color: rgb(212, 221, 218);
+            border-radius: 10px;
+        }
+
+        .arrow2:hover {
+            background-color: rgb(212, 221, 218);
+            border-radius: 10px;
+        }
+
+        .arrow3:hover {
+            background-color: rgb(212, 221, 218);
+            border-radius: 10px;
+        }
+
+        .arrow4:hover {
+            background-color: rgb(212, 221, 218);
+            border-radius: 10px;
+        }
+
+        .arrow5:hover {
+            background-color: rgb(212, 221, 218);
+            border-radius: 10px;
+        }
+
+        .part5text111b {
+            padding: 3%3%;
+            border-radius: 10px;
+        }
+
+        .item5 {
+            display: flex;
+            gap: -80%;
+        }
+
+        #fname,
+        #lname {
+            width: 100%;
+            padding: 2% 2%;
+            margin: 1% 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        [type=submit] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 2% 2%;
+            margin: 1% 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        [type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .locate2 {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 6%;
+            margin-left: -90%;
+        }
+
+        .item6 {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5%;
+            gap: -50%;
+        }
+        @media  (width<776) {
+            .item6{
+                display: grid;
+                grid-template-columns: auto auto;
+        
+            }
+            
+        }
+        .item7{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 5%;
+        }
+        .foot1{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .foot2{
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            gap: 15px;
+        }
+         
+         #lastone{
+            padding-left: 15%;;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">
+
+            <img src="./banner-bg.png" alt="" id="pic1">
+            <div class="mainnavbar"></div>
+            <div class="parentnavbar">
+                <div class="nav">
+                    <div class="box1">
+                        <span style="font-family: Ga Maamli;">ART <span style="font-family: Forte; font-size:200%;">FACTORY</span></span>
+                    </div>
+                    <div class="box2">
+                        <li id="h11"><span style="color: red;">HOME</span></li>
+                        <li id="h11">ABOUT </li>
+                        <li id="h11">SERVICES</li>
+                        <li id="h11">FREQUENTLY QUESTIONS</li>
+                        <li id="h11">DROP DOWN</li>
+                        <li id="h11">CONTACT US</li>
+                    </div>
+                </div>
+            </div>
+            <div class="part1main">
+                <div class="part1">
+                    <span id="text1">
+                        <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  "><span
+                                id="textstyle" >Art Factory is</span> <br><span id="textstyle2">free for You</span></h1>
+                    </span>
+                    <span>
+                        <p>This template is avilable for 100% free of charge on TemplateMo. <br>Download,modify and use
+                            this for your business</p>
+                    </span>
+                            <span id="lastone"><input type="button" value="FIND OUT MORE"  style="border-radius: 18px;   height: 30px;font-size:medium;color: white; width:30%;  background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            </span>       
+                </div>
+                <div class="part11">
+                    <span><img src="./slider-icon.png" alt="" class="anmi1"></span>
+                </div>
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="mainitem2">
+            <div class="item2">
+                <div class="item2a">
+                    <img src="./left-image.png" alt="" style="margin-top: 120px;" class="anmi1">
+                </div>
+                <div class="item2b" style="margin-top: 220px;">
+                    <div class="span1a" style="font-family: Palatino Linotype;"><b>Vivamus sodales nisi id ante molestie
+                            venenatis</b></div> <br><br>
+                    <div class="span1b">Fusce sollicitudin feugiat risus, tempus faucibus arcu blandit nec. Duis auctor
+                        dolor eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet tristique condimentum.</div>
+                    <br> <br>
+                    <div class="span1c">Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit amet,
+                        ultrices malesuada odio. Donec non quam euismod, mattis dui a, ultrices nisi.</div> <br><br>
+                    <div class="span1d" style="margin-left: 110px;">DISCOVER MORE</div>
+                </div>
+            </div>
+        </div><br><br><br><br><br><br>
+        <div class="mainitem3">
+            <div class="item3">
+                <div class="item3b" style="margin-top: 220px;">
+                    <div class="span3a" style="font-family: Berlin Sans FB;"><b>Curabitur aliquam eget tellus id
+                            porta</b></div> <br>
+                    <div class="span3b">Proin justo sapien, posuere suscipit tortor in, fermentum mattis elit. Aenean in
+                        feugiat purus.</div><br> <br>
+                    <div class="mainbox1">
+                        <div class="box1">
+                            <div class="item11">
+                                <img src="./about-icon-01.png" alt="" width="45%">
+                                <div class="itemsub1">
+                                    <h5 style="font-size: 110%;" id="text11">Nulla ultricies risus quis risus</h5>
+                                    <h5> You can use this website template for commercial or non-commercial purposes.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="item11">
+                                <img src="./about-icon-02.png" alt="" width="45%">
+                                <div class="itemsub1">
+                                    <h5 style="font-size: 110%;" id="text11">Donec consequat commodo purus</h5>
+                                    <h5>You have no right to re-distribute this template as a downloadable ZIP file.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box1">
+                            <div class="item11">
+                                <img src="./about-icon-03.png" alt="" width="45%">
+                                <div class="itemsub1">
+                                    <h5 style="font-size: 110%;" id="text11">Sed placerat sollicitudin mauris</h5>
+                                    <h5>If you have any question or comment, please contact us on TemplateMo.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item3a">
+                <img src="./right-image.png" alt="" style="margin-top: 120px;" class="anmi1">
+            </div>
+
+        </div>
+
+
+        <div class="item4">
+            <div class="content1">
+                <div class="part5">
+                     
+                    <div class="box1111" style="box-shadow: -2px 3px 10px darkblue;">
+                        <div class="item1111">
+                            <img src="./service-icon-01.png" alt="_strip" class="imgpic111">
+                            <div class="itemsub1111">
+                                <h5 class="part5text">First Box Service</h5>
+                                <p style="padding-bottom: 3%;">Amean vulputate massa sed neque consectetur, ac fringilla
+                                    quam aliquet. Sed a enim nec eros tempor cursus at id libero</p>
+                                <input type="button" value="READ MORE"
+                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box2222" style="box-shadow: -2px 3px 10px darkblue;">
+                        <div class="item1111">
+                            <img src="./service-icon-02.png" alt="_strip" class="imgpic111">
+                            <div class="itemsub11111">
+                                <h5 class="part5text" style="margin-left: 25%;">Second Box Title</h5>
+                                <p style="padding-bottom: 3%;" align="center">Pellentesque vitae urna ut nisi viverra
+                                    tristique quis at dolor. in non sodales dolor, id egestas quam. Aliquam erat
+                                    volutpat.</p>
+                                <input type="button" value="READ MORE" id="button1"
+                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+                            </div>
+                        </div>
+                        <div class="item3">
+                        </div>
+                    </div>
+                    <div class="box3333" style="box-shadow: -2px 3px 10px darkblue;">
+                        <div class="item1111">
+                            <img src="./service-icon-03.png" alt="_strip" class="imgpic111">
+                            <div class="itemsub1111">
+                                <h5 class="part5text">Third Title Box</h5>
+                                <p style="padding-bottom: 3%;" id="part5text1">Quisque finibus libero augue, in ultrices
+                                    quam dictum id. Aliquam quis tellus sit amet urna tincidunt bibendum.</p>
+                                <input type="button" value="READ MORE"
+                                    style="border-radius: 10px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                                    
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <i id=angleright" fa-solid fa-circle-arrow-right"></i>
+                </div>
+
+            </div>
+
+            <span id="part5text11">Frequently Asked Questions</span><br>
+            <span id="part5text22">Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien. Nunc euismod risus
+                ac lobortis congue. Sed erat quam.</span>
+            <div class="item5">
+                <div class="part5text111a" style="margin-left: 10%;">
+                    <h1 style="width: 65%; font-family:Arial Rounded MT; padding-left:4%;">Class aptent taciti sociosqu
+                        ad litora torquent per conubia</h1>
+                    <p style="width: 65%; font-family:Arial Unicode MS; padding-left:4%; color:black;">Curabitur
+                        placerat cian in risus lobortis, laoreet porttitor est elementum. Nulla ultricies risus quis
+                        risus scelerisque, a aliquam tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean
+                        bibendum erat vitae ocio sodales, in facilisis tellus volutpat.</p>
+                    <p style="width: 65%; font-family:Arial Unicode MS; padding-left:4%; color:black;">Sed lobortis
+                        pellentesque magna ac congue, Suspendisse quis molestie magna, id eleifend ex. Ut mollis
+                        ultricies diam nec dictum. Morbi commodo hendrerit mi vel vulputate. Proin non tincidunt dui.
+                        Lorem ipsum dolor sit amet.</p><br>
+                    <p style="width: 39%; font-family:Arial Unicode MS; padding-left:4%; color:black;">E-Mail: <span
+                            style="color: blue;">venkatn0012@gmail.com</span></p><br>
+                    <input type="button" value="CONTACT US" id="button1"
+                        style="border-radius: 20px;height: 30px;font-size:medium;color: white;background-color: black;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left:4%">
+
+                </div>
+                <div class="part5text111b"
+                    style="background-color:rgb(230, 241, 241) ; width:40%; height:50%; margin-right:15%; margin-top:2%; align-items:center;">
+                    <div class="arrow1">
+                        <span style="font-family: Arial Unicode MS;    "><b>First Common Questions</b></span>
+                        <i class="fa-solid fa-angle-down"  ></i>
+                    </div><br>
+                    <span>Dule vulputate porttitor urna sit amet pretium. Phasellusa and pulvinar cros, condimentum
+                        consequat ex. Suspendisse potenti.</span>
+                    <br><br>
+                    <span>Pellentesque maximus lorem sed elit imperdiet mattis. Duis posuere mauris ut eros rutrun
+                        sodales. Aliquam erat volutpat.</span><br><br>
+                    <div class="arrow2">
+                        <span style="font-family: Arial Unicode MS;"> <b>Second Question Answer</b></span>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div><br>
+                    <div class="arrow3">
+                        <span style="font-family: Arial Unicode MS;"> <b>Third Question Answer</b></span>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div><br>
+
+
+                    <div class="arrow4">
+                        <span style="font-family: Arial Unicode MS;"> <b>Fourth Question Answer</b></span>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div><br>
+
+                    <div class="arrow5">
+                        <span style="font-family: Arial Unicode MS;"> <b>Fifth Question Answer</b></span>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item6">
+            <div class="locate1" style="margin-left: -1%;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
+                    width="295%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="locate2">
+                <form action="">
+                    <input type="text" id="fname" name="firstname" placeholder="FULL NAME . . . .">
+                    <input type="text" id="lname" name="lastname" placeholder="E-MAIL . . . .">
+                    <input type="text" id="lname" name="lastname" placeholder="YOUR MESSAGE. . . .">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="item7">
+        <div class="foot1" style="font-size: 100%;">
+            Copyright @ 2024 Art Factory Company . Desgin : <span style="color: blue;">@ Venkat Venky</span>
+        </div>
+        <div class="foot2" style="font-size: 150%; color:blue; ">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-chromecast"></i>
+            <i class="fa-brands fa-chrome"></i>
+        </div>
+    </div>
+</body>
+
+</html>
