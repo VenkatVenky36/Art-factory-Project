@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Art Factory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        
+    
+    
+    *{
+        
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+    }
+    
+    ::selection {
+        background: #ff589e;
+        color: #fff;
+    }
+    
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+    
+    body{
+        background: #f9f9f9;
+    }
+    
+    section{
+        min-height: 100vh;
+        padding: 0 9%;
+        padding-top: 7.5rem;
+    }
+    
+    .btn{
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        border-radius: 5rem;
+        background: #f55858;
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: all .3s linear;
+    }
+    
+    .btn:hover{
+        transform: scale(1.1);
+    }
+    
+    .btn1{
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 3rem;
+        border-radius: 5rem;
+        background: #00b4c6;
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transition: all .3s linear;
+    }
+    
+    .btn1:hover{
+        background-color:black ;
+    }
+    
+    /* About Us Heading CSS Start */
+    
+    .heading{
+        text-align: center;
+        color: var(--blue);
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+    
+    .para{
+        text-align: center;
+        color: #4a4a4a;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .heading1{
+        text-align: center;
+        color: #fff;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+    
+    /* About Us Heading CSS End */
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+    
+    header .logo{
+        font-size: 3rem;
+        letter-spacing: .1rem;
+        color: var(--dark);
+        font-weight: 700;
+      
+    }
+    
+    header .logo span{
+        color: var(--dark);
+        
+    }
+    
+    header .navbar a{
+        font-size: 1.7rem;
+        margin-left: 2rem;
+        color: var(--dark);
+    }
+    
+    header .navbar a:hover{
+        color: var(--red);
+    }
+    
+    header input{
+        display: none;
+    }
+    
+    header label{
+        font-size: 3rem;
+        color: var(--bluedark);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(./banner-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .home .image img{
+        width: 40vw;
+        animation: float 3s linear infinite;
+    }
+    
+    @keyframes float{
+        0%, 100%{
+            transform: translateY(0rem);
+        }
+        50%{
+            transform: translateY(-3.5rem);
+        }
+    }
+    
+    .home .content h3{
+        font-size: 5.5rem;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    
+    .home .content h3 span{
+        /* color: var(--pink); */
+        text-transform: uppercase;
+    }
+    
+    .home .content p{
+        font-size: 1.7rem;
+        color: #fff;
+        padding: 1% 0;
+    }
+    
+    .about .column{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 3% 0;
+    }
+    
+    .about .column .image{
+        flex: 1 1 40rem;
+    }
+    
+    .about .column .image img{
+        width: 100%;
+    }
+    
+    .about .column .content{
+        flex: 1 1 40rem;
+    }
+    
+    .about .column .content h3{
+        font-size: 3rem;
+        color: #1e1e1e;
+    }
+    
+    .about .column .content p{
+        font-size: 1.5rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+     
+    
+    .about .column ul li{
+        list-style: none;
+    }
+    
+    .about .column ul li img{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+         
+    }
+    
+    .about .column ul li .text{
+        
+        margin-left: 1rem;
+    }
+    
+    .about .column ul li .text h3{
+        font-size: 1.8rem;
+        color: #1e1e1e;
+    }
+    
+    .about .column ul li .text h3{
+        font-size: 1.8rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+    .services{
+        background: linear-gradient(135deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        /* background: linear-gradient(-45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%); */
+    }
+    
+    .services .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .services .box-container .box{
+        background: #fff;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        border: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        flex: 1 1 30rem;
+        border-radius: .5rem;
+    }
+    
+    .services .box-container .box .user{
+        padding: 4rem;
+    }
+    
+    .services .box-container .box .user img{
+        background: #00b4c6;
+        padding: 1rem;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 9rem;
+        width: 9rem;
+        margin-top: 2rem;
+    }
+    
+    .services .box-container .box .user h3{
+        color: #1e1e1e;
+        font-size: 2rem;
+    }
+    
+    .services .box-container .box .user p{
+        color: #777;
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+    
+    .faq{
+        min-height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    
+    .faq .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .faq .row .content{
+        /* height: 70vh;
+        width: 50vw; */
+        width: 100%;
+        flex: 1 1 40rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align:justify;
+    }
+    
+    .faq .row .content h3{
+        font-size: 3rem;
+        color: #1e1e1e;
+    }
+    
+    .faq .row .content p{
+        font-size: 1.5rem;
+        color: #4a4a4a;
+        padding: 1rem 0;
+    }
+    
+    .faq .row .content span{
+        font-size: 1.5rem;
+        color: var(--dark);
+    }
+    
+    .faq .row .content span a{
+        font-weight: 500;
+    }
+    
+    .faq .row .content span a:hover{
+        color: var(--blue);
+    }
+    
+    .faq .row .accordion-container{
+        width: 50%;
+        text-align: left;
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header{
+        background-color: #eeeeee;
+        margin: 1rem 0;
+        box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+         
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header span{
+        display: inline-block;
+        text-align: center;
+        height: 4rem;
+        width: 5rem;
+        line-height: 4rem;
+        font-size: 2rem;
+        background: #fff;
+        color: #333;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-header h3{
+        display: inline;
+        color: #1e1e1e;
+        font-weight: 400;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .faq .row .accordion-container .accordion .accordion-body{
+        padding: 1rem;
+        color: #444;
+        box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .3);
+        font-size: 1.3rem;
+        display: none;
+    }
+    
+    .faq .row .accordion-container .accordion:nth-child(1) .accordion-body{
+        display: block;
+    }
+    
+    .contact{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact .row iframe{
+        height: 70vh;
+        width: 50vw;
+    }
+    
+    .contact .row .form-container{
+        /* height: 70.5vh; */
+        width: 50%;
+        text-align: left;
+        padding: 8.5rem 5rem;
+        background: linear-gradient(135deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+    }
+    
+    .contact .row .form-container input, textarea{
+        outline: none;
+        border: none;
+        height: 4rem;
+        background: none;
+        border-radius: .5rem;
+        box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, .2);
+        padding: 0 1rem;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .contact .row .form-container .inputBox{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ::placeholder{
+        color: #fff;
+    }
+    
+    .contact .row .form-container .inputBox input[type="text"]{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        width: 49%;
+    }
+    
+    .contact .row .form-container .inputBox input[type="email"]{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%); 
+        width: 49%;
+    }
+    
+    .contact .row .form-container textarea{
+        background: linear-gradient(45deg,
+        rgba(0, 136, 232, 1) 0%,
+        rgba(0, 182, 198, 1) 0%,
+        rgba(0, 136, 232, 1) 100%);
+        width: 100%;
+        height: 20rem;
+        padding: 1rem;
+        resize: none;
+        color: #fff;
+    }
+    
+    .contact .row .form-container input[type="submit"]{
+        background-color: #f55858;
+        color: #fff;
+        cursor: pointer;
+        height: 4rem;
+        width: 10rem;
+        border-radius: 5rem;
+    }
+    
+    .contact .row .form-container input[type="submit"]:hover{
+        background: var(--blue);
+        transition: all .3s linear; 
+    }
+    
+    .footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+         
+    }
+    
+    .footer p{
+        color: #4a4a4a;
+        letter-spacing: .1rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    
+    .footer .icons a{
+        color: #00b4c6;
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+    .anmi1 {
+        animation: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translate(0, 30px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+     
+    /* Media Queries */
+    
+    @media screen and (max-width:1200px) {
+        html{
+            font-size: 55%;
+        }
+    
+        .contact .row{
+            /* flex-flow: column; */
+            flex-flow: row;
+        }
+    
+        .contact .row .map iframe{
+            /* width: 100vw; */
+            width: 50vw;
+            height: 33.2rem;
+        }
+    
+        .contact .row .form-container{
+            width: 100%;
+            /* padding: 13rem 1.5rem; */
+            padding: 0rem 1.5rem;
+    
+        }
+    }
+    
+    @media screen and (max-width:991px) {
+        section{
+            min-height: 100vh;
+            padding: 0 3%;
+            padding-top: 7.5rem;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        header label{
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        header .navbar{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 1rem 2rem;
+            border-top: .1rem solid rgba(0, 0, 0, .2);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            transform-origin: top;
+            transform: scaleY(0);
+            opacity: 0;
+            transition: .2s linear;
+        }
+    
+        header .navbar a{
+            display: block;
+            margin: 2rem 0;
+            font-size: 2rem;
+        }
+    
+        header input:checked ~ .navbar{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    
+        header input:checked ~ label::before{
+            content: '\f00d';
+        }
+    
+        .home{
+            flex-flow: column-reverse;
+        }
+    
+        .home .image img{
+            width: 100%;
+        }
+    
+        .home .content h3{
+            font-size: 3.6rem;
+        }
+    
+        .home .content p{
+            font-size: 1.5rem;
+        }
+    
+        .about{
+            background-position: right;
+        }
+    
+        .faq{
+            padding: 0;
+        }
+    
+        .faq .row{
+            padding: 0 1rem;
+            flex-flow: column;
+        }
+    
+        .faq .row .content{
+            width: 100vw;
+        }
+    
+        .faq .row .accordion-container{
+            width: 150%;
+        }
+    
+        .contact .row{
+            flex-flow: column;
+        }
+    
+        .contact .row .map iframe{
+            width: 100vw;
+        }
+    
+        .contact .row .form-container{
+            width: 100%;
+            /* padding: 13rem 1.5rem; */
+            padding: 0rem 1.5rem;
+    
+        }
+    
+        .footer{
+            flex-flow: column;
+        }
+        .footer h1{
+            text-align: center;
+        }
+    
+        .footer .icons{
+            padding: 1rem 0;
+        }
+    }
+    
+    @media screen and (max-width:450px) {
+        html{
+            font-size: 50%;
+        }
+    
+        .about .column .content .buttons a{
+            width: 100%;
+            text-align: center;
+        }
+    
+         
+    }
+     
+    </style>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+      
+      <header>
+        <a href="#" class="logo" ><span >ART</span>FACTORY</a>
+  
+        <input type="checkbox" id="menu-bar" />
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="navbar">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+           
+          <a href="#services"> SERVICE</a>
+          <a href="#contact">CONTACT US</a>
+        </nav>
+      </header>
+      <!-- Header Section End -->
+  
+      <!-- Home Section Start -->
+       
+  
+  
+      <section class="home" id="home">
+        <div class="content">
+          <h3>Art Factory is free <span>for You</span></h3>
+          <p>
+            This template is available for 100% free of charge on TemplateMo.
+            Download, modify and use this for your business website.
+          </p>
+          <a href="#about" class="btn">Find Out More</a>
+        </div>
+        <div class="image">
+          <img src="./slider-icon.png" alt="slider" />
+        </div>
+      </section>
+      <!-- Home Section End -->
+  
+      <!-- About Section Start -->
+  
+      
+      <section class="about" id="about">
+        <h1 class="heading">About Us</h1>
+        <div class="column">
+          <div class="image">
+            <img src="./left-image.png" alt="" class="anmi1">
+          </div>  
+          <div class="content" style="padding-top: 30px;">
+            <h3>Vivamus sodales nisi id ante molestie venenatis</h3>
+            <p>
+              This template is <a href="#">last updated on 20 August 2019 </a>for
+              main menu drop-down arrow and sub menu text color. Duis auctor dolor
+              eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet
+              tristique condimentum.
+            </p>
+            <p>
+              Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit
+              amet, ultrices malesuada odio. Donec non quam euismod, mattis dui a,
+              ultrices nisi.
+            </p>
+            <div class="buttons">
+              <a href="#services" class="btn1">Discover More</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="content">
+              <h3>Curabitur aliquam eget tellus id porta</h3>
+              <p>
+                  Proin justo sapien, posuere suscipit tortor in, fermentum mattis
+                  elit. Aenean in feugiat purus.
+              </p>
+              <br /><br />
+              <ul>
+                  <li>
+                      
+                      <img src="./about-icon-01.png" alt="">
+                      <div class="text">
+                  <h3>Nulla ultricies risus quis risus</h3>
+                  <p>
+                    You can use this website template for commercial or
+                    non-commercial purposes.
+                  </p>
+                </div>
+                <br />
+              </li>
+              <li>
+                <img src="./about-icon-02.png" alt="" >
+                <div class="text">
+                  <h3>Donec consequat commodo purus</h3>
+                  <p>
+                    You have no right to re-distribute this template as a
+                    downloadable ZIP file on any website.
+                  </p>
+                </div>
+                <br />
+              </li>
+              <li>
+                <img src="./about-icon-03.png" alt="" />
+                <div class="text">
+                  <h3>Sed placerat sollicitudin mauris</h3>
+                  <p>
+                    If you have any question or comment, please
+                    <a rel="" href="">contact</a>
+                    us on TemplateMo.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="image">
+            <img src="./right-image.png" alt="" class="anmi1">
+          </div>
+        </div>
+        
+      </section><br><br><br><br><br><br>
+      <!-- service section start -->
+      <section class="services" id="services">
+        <h1 class="heading1">Services</h1>
+        <br /><br /><br />
+        <div class="box-container">
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-01.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>First Box Service</h3>
+              <br />
+              <p>
+                Aenean vulputate massa sed neque consectetur, ac fringilla quam
+                aliquet. Sed a enim nec eros tempor cursus at id libero.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">Read More</a><br /><br />
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-02.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>Second Box Title</h3>
+              <br />
+              <p>
+                Pellentesque vitae urna ut nisi viverra tristique quis at dolor.
+                In non sodales dolor, id egestas quam. Aliquam erat volutpat.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">Discover More</a><br /><br />
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="user">
+              <img
+                src="./service-icon-03.png"
+                alt=""
+              /><br /><br /><br />
+              <h3>Third Title Box</h3>
+              <br />
+              <p>
+                Quisque finibus libero augue, in ultrices quam dictum id. Aliquam
+                quis tellus sit amet urna tincidunt bibendum.
+              </p>
+              <br />
+              <div class="buttons">
+                <a href="#" class="btn1">More Detail</a><br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Service Section End -->
+  
+      <!-- FAQ Section Start -->
+      <section class="faq" id="faq" >
+        <br /><br /><br /><br /><br /><br>
+        <h1 class="heading">Frequently Asked Questions</h1>
+        <p class="para">
+          Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien.<br />
+          Nunc euismod risus ac lobortis congue. Sed erat quam.
+        </p>
+        <div class="row" >
+          <div class="content" style="padding:3% 5%;">
+            <h3>Class aptent taciti sociosqu ad litora torquent per conubia.</h3>
+            <p>
+              Curabitur placerat diam in risus lobortis, laoreet porttitor est
+              elementum. Nulla ultricies risus quis risus scelerisque, a aliquam
+              tellus maximus. Cras pretium nulla ac convallis iaculis. Aenean
+              bibendum erat vitae odio sodales, in facilisis tellus volutpat.
+            </p>
+            <p>
+              Sed lobortis pellentesque magna ac congue. Suspendisse quis molestie
+              magna, id eleifend ex. Ut mollis ultricies diam nec dictum. Morbi
+              commodo hendrerit mi vel vulputate. Proin non tincidunt dui. Lorem
+              ipsum dolor sit amet.
+            </p>
+            <span>Email: <a href="#"><span style="color: blue;">venkatn0012gmail.com</span></a><br /></span>
+            <div class="buttons"> <br><br>
+              <a href="#contact" class="btn1">Contact Us</a>
+            </div>
+          </div>
+          <div class="accordion-container" style="width:370
+          px" >
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>First Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Duis vulputate porttitor urna sit amet pretium. Phasellus sed
+                  pulvinar eros, condimentum consequat ex. Suspendisse potenti.
+                  <br /><br />
+                  Pellentesque maximus lorem sed elit imperdiet mattis. Duis
+                  posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>Second Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Sed odio elit, cursus sed consequat at, rutrum eget augue. Cras
+                  ac eros iaculis, tempor quam sit amet, scelerisque mi. Quisque
+                  eu risus eget nunc porttitor vestibulum at a ante. <br /><br />
+                  Praesent ut placerat turpis, vel pellentesque dolor. Sed rutrum
+                  eleifend tortor, eu luctus orci sagittis in. In blandit
+                  fringilla mollis.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>Third Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Proin feugiat ante ut vulputate rutrum. Nam quis erat turpis.
+                  Nullam maximus pharetra lorem, eu condimentum est iaculis ut.
+                  Pellentesque mattis ultrices dignissim. <br /><br />
+                  Etiam et enim finibus, feugiat massa efficitur, finibus sapien.
+                  Sed cursus lacus quis arcu scelerisque, eget ornare risus
+                  maximus. Aenean non lectus id odio rhoncus pharetra.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>Fourth Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Phasellus eu purus ornare, eleifend orci nec, egestas nulla. Sed
+                  sed aliquet sapien. Proin placerat, ipsum eu posuere blandit,
+                  tellus quam consectetur nisi, id sollicitudin diam ex at nisi.
+                  <br /><br />
+                  Aenean fermentum eget turpis egestas semper. Sed finibus mollis
+                  venenatis. Praesent at sem in massa iaculis pharetra.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>Fifth Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Quisque aliquet ipsum ut magna rhoncus, euismod lacinia elit
+                  rhoncus. Sed sapien elit, mollis ut ultricies quis, fermentum
+                  nec ante. <br /><br />
+                  Sed nec ex nec tortor fermentum sollicitudin id ut ligula. Ut
+                  sagittis rutrum lectus, non sagittis ante euismod eu.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordion">
+              <div class="accordion-header">
+                <span><i class="fa-solid fa-pen-nib"></i></span>
+                <h3>Sixth Question Answer</h3>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Suspendisse potenti. Ut dapibus leo ut massa vulputate semper.
+                  Pellentesque maximus lorem sed elit imperdiet mattis. Duis
+                  posuere mauris ut eros rutrum sodales. Aliquam erat volutpat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section End -->
+  
+      <!-- Contact Section Start -->
+      <div class="contact" id="contact" style=" height:50%">
+        <br />
+        <h1 class="heading" >Contact Us</h1>
+        <br />
+        <div class="row">
+          <div class="map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30441.75562653149!2d78.401586!3d17.49703455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1720971374615!5m2!1sen!2sin"
+            width="295%" height="550" style="border:0; " allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"   ></iframe>
+          </div>
+          <div class="form-container" style="  height:444px; width:444px;  >
+            <form action="">
+              <div class="inputBox">
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email" required />
+              </div>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <input type="submit" value="SEND " />
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Section End -->
+  
+      <!-- Footer Section Start -->
+      <div class="footer">
+        <!-- <h1>Created by Mr.Ray | All Rights Reserved.</h1> -->
+        <p>Copyright &copy; 2024 Art Factory Company Desgin <span style="color: blue;">@Venkat Venky</span></p>
+  
+        <div class="icons">
+          <a href="https://www.instagram.com/" <i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://x.com/VenkatV80881839" class="fa-brands fa-square-instagram"></a>
+          <a href="https://www.linkedin.com/in/nallamati-venkat-3673452b5/" class="fa-brands fa-linkedin"></a>
+          <a href="https://github.com/Nallamativenkat" c<i class="fa-brands fa-github"></i></a>
+          <a href="#" class="fa-brands fa-square-dribbble"></a>
+        </div>
+      </div>
+      <!-- Footer Section End -->
+      
+      </body>
+</html>
+ 
